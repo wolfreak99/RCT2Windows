@@ -1,16 +1,210 @@
 <html>
 <head>
 	<title>Example</title>
-	<link rel="stylesheet" href="css/windows.css">
+	<style type="text/css">
+		@font-face {
+			font-family: 'rct2regular';
+			src: url('css/fonts/rct2-webfont.eot');
+			src: url('css/fonts/rct2-webfont.eot?#iefix') format('embedded-opentype'),
+				 url('css/fonts/rct2-webfont.woff2') format('woff2'),
+				 url('css/fonts/rct2-webfont.woff') format('woff'),
+				 url('css/fonts/rct2-webfont.ttf') format('truetype'),
+				 url('css/fonts/rct2-webfont.svg#rct2regular') format('svg');
+			font-weight: normal;
+			font-style: normal;
+
+		}
+
+
+		.rctbox {
+			border-top: #9FAFAF solid 1px;
+			border-left: #9FAFAF solid 1px;
+			border-bottom: #4B6363 solid 1px;
+			border-right: #4B6363 solid 1px;
+
+			margin-bottom: 15px;
+		}
+		.rctbox .content {
+			background: #8B8BBF;
+			color: white;
+			border-top: #B7B7DF solid 1px;
+			border-left: #B7B7DF solid 1px;
+			border-bottom: #63639B solid 1px;
+			border-right: #63639B solid 1px;
+			overflow: hidden;
+		}
+		.rctbox .content a {
+			color: black;
+		}
+		.rctbox .font span {
+			display: block;
+			line-height: 14px;
+		}
+		.rctbox .font ul{
+			padding: 0;
+			margin: 0;
+		}
+		.rctbox .font ol li {
+			line-height: 14px;
+		}
+		.rctbox .font ul li {
+			display: block;
+			line-height: 14px;
+		}
+		.rctbox .font {
+			font-family: 'rct2regular';
+			line-height: 16px;
+		}
+
+		.rctbox .content.textpadding {
+			padding: 10px;
+		}
+
+		.rctbox .content table.alter  {
+			width: 100%;
+		}
+		.rctbox .content table.alter td {
+			padding-left: 5px;
+		}
+		.rctbox .content table.alter tr:nth-child(odd){
+			background: #8B8BBF;
+		}
+		.rctbox .content table.alter tr:nth-child(even) {
+			background: #7777AF;
+		}
+
+		.rctbox .title {
+			background: #2F4343;
+			background-image: url("img/x_button.png");
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: right;
+			color: white;
+			text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+			font-family: 'rct2regular';
+			text-align: center;
+			font-size: 12pt;
+			line-height: 12px;
+			padding-top: 2px;
+			border-top: #4B6363 solid 1px;
+			border-left: #4B6363 solid 1px;
+			border-bottom: #9FAFAF solid 1px;
+			border-right: #9FAFAF solid 1px;
+		}
+
+		.rctbox.green {
+			border-top: #9FAFAF solid 1px;
+			border-left: #9FAFAF solid 1px;
+			border-bottom: #4B6363 solid 1px;
+			border-right: #4B6363 solid 1px;
+		}
+		.rctbox.green .content {
+			background: #9FB76F;
+			color: black;
+			border-top: #C3DB93 solid 1px;
+			border-left: #C3DB93 solid 1px;
+			border-bottom: #6F874F solid 1px;
+			border-right: #6F874F solid 1px;
+		}
+		
+		
+		.rctbox.green {
+			border-top: #9FAFAF solid 1px;
+			border-left: #9FAFAF solid 1px;
+			border-bottom: #4B6363 solid 1px;
+			border-right: #4B6363 solid 1px;
+		}
+		.rctbox.green .content {
+			background: #9FB76F;
+			color: black;
+			border-top: #C3DB93 solid 1px;
+			border-left: #C3DB93 solid 1px;
+			border-bottom: #6F874F solid 1px;
+			border-right: #6F874F solid 1px;
+		}
+		
+		
+		
+		.rctbox.yellow {
+			border-top: #9FAFAF solid 1px;
+			border-left: #9FAFAF solid 1px;
+			border-bottom: #4B6363 solid 1px;
+			border-right: #4B6363 solid 1px;
+		}
+		.rctbox.yellow a {
+			color: #F3CB1B;
+		}
+		.rctbox.yellow .content {
+			background: #A76F07;
+			color: black;
+			border-top: #D7A713 solid 1px;
+			border-left: #D7A713 solid 1px;
+			border-bottom: #773F00 solid 1px;
+			border-right: #773F00 solid 1px;
+		}
+
+
+		.rctbox.red {
+			border-top: #9FAFAF solid 1px;
+			border-left: #9FAFAF solid 1px;
+			border-bottom: #4B6363 solid 1px;
+			border-right: #4B6363 solid 1px;
+		}
+		.rctbox.red .title, .rctbox.brown .title  {
+			background-color: #371F07;
+			background-image: url("img/x_button_b.png");
+
+			border-top: #5B3F1F solid 1px;
+			border-left: #5B3F1F solid 1px;
+			border-bottom: #A3937F solid 1px;
+			border-right: #A3937F solid 1px;
+		}
+		.rctbox.red .content {
+			background: #A33B3B;
+			color: white;
+			border-top: #D77F7F solid 1px;
+			border-left: #D77F7F solid 1px;
+			border-bottom: #8F2727 solid 1px;
+			border-right: #8F2727 solid 1px;
+		}
+		.rctbox.brown {
+			border-top: #9FAFAF solid 1px;
+			border-left: #9FAFAF solid 1px;
+			border-bottom: #4B6363 solid 1px;
+			border-right: #4B6363 solid 1px;
+		}
+
+		.rctbox.brown .content {
+			background: #8F7F6B;
+			color: white;
+			border-top: #BBAB93 solid 1px;
+			border-left: #BBAB93 solid 1px;
+			border-bottom: #6B5333 solid 1px;
+			border-right: #6B5333 solid 1px;
+		}
+
+		.rctbox .text-black {
+			color: black!important;
+		}
+		.rctbox .text-white {
+			color: white!important;
+		}
+		.rctbox .verybigfont {
+			font-size: 32pt;
+			line-height: 30px;
+			padding-top: 10px;
+		}
+	</style>
 </head>
 <body>
-<div class="rctbox blue">
+	
+<div class="rctbox brown">
 	<div class="title">
 		More information
 	</div>
 	<div class="content font textpadding">
 		<ul>
-			<li><a href="https://github.com/IntelOrca/OpenRCT2" target="_blank">OpenRCT2 GitHub Repository</a></li>
+			<li><input type="checkbox"></li>
 			<li><a href="https://gitter.im/IntelOrca/OpenRCT2" target="_blank">OpenRCT2 Developer Chat</a></li>
 			<li><a href="https://www.facebook.com/OpenRCT2">Official Facebook page</a></li>
 			<li><a href="https://openrct.net/builds.php">Automated Builds</a></li>
@@ -20,54 +214,7 @@
 		</ul>
 	</div>
 </div>
-<div class="rctbox green">
-	<div class="title">
-		More information
-	</div>
-	<div class="content font textpadding">
-		<ul>
-			<li><a href="https://github.com/IntelOrca/OpenRCT2" target="_blank">OpenRCT2 GitHub Repository</a></li>
-			<li><a href="https://gitter.im/IntelOrca/OpenRCT2" target="_blank">OpenRCT2 Developer Chat</a></li>
-			<li><a href="https://www.facebook.com/OpenRCT2">Official Facebook page</a></li>
-			<li><a href="https://openrct.net/builds.php">Automated Builds</a></li>
-			<li><a href="https://openrct2.com/">More Automated Builds</a></li>
-			<li><a href="http://www.reddit.com/r/rct/">Rollercoaster Tycoon 2 subreddit</a></li>
-			<li><a href="http://www.reddit.com/r/openrct2">OpenRCT2 subreddit</a></li>
-		</ul>
-	</div>
-</div>
-<div class="rctbox red">
-	<div class="title">
-		More information
-	</div>
-	<div class="content font textpadding">
-		<ul>
-			<li><a href="https://github.com/IntelOrca/OpenRCT2" target="_blank">OpenRCT2 GitHub Repository</a></li>
-			<li><a href="https://gitter.im/IntelOrca/OpenRCT2" target="_blank">OpenRCT2 Developer Chat</a></li>
-			<li><a href="https://www.facebook.com/OpenRCT2">Official Facebook page</a></li>
-			<li><a href="https://openrct.net/builds.php">Automated Builds</a></li>
-			<li><a href="https://openrct2.com/">More Automated Builds</a></li>
-			<li><a href="http://www.reddit.com/r/rct/">Rollercoaster Tycoon 2 subreddit</a></li>
-			<li><a href="http://www.reddit.com/r/openrct2">OpenRCT2 subreddit</a></li>
-		</ul>
-	</div>
-</div>
-<div class="rctbox yellow">
-	<div class="title">
-		More information
-	</div>
-	<div class="content font textpadding">
-		<ul>
-			<li><a href="https://github.com/IntelOrca/OpenRCT2" target="_blank">OpenRCT2 GitHub Repository</a></li>
-			<li><a href="https://gitter.im/IntelOrca/OpenRCT2" target="_blank">OpenRCT2 Developer Chat</a></li>
-			<li><a href="https://www.facebook.com/OpenRCT2">Official Facebook page</a></li>
-			<li><a href="https://openrct.net/builds.php">Automated Builds</a></li>
-			<li><a href="https://openrct2.com/">More Automated Builds</a></li>
-			<li><a href="http://www.reddit.com/r/rct/">Rollercoaster Tycoon 2 subreddit</a></li>
-			<li><a href="http://www.reddit.com/r/openrct2">OpenRCT2 subreddit</a></li>
-		</ul>
-	</div>
-</div>
+
 <div class="rctbox brown">
 	<div class="title">
 		More information
