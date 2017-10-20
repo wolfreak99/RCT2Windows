@@ -213,17 +213,13 @@ body {
     <div id="textarea">
       <div id="textareawrapper">
         <textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false">
-<html>
-<head>
-<title>Page Title</title>
-</head>
-<body>
+<?php
+    // $path = basename($path);
+    $html = file_get_contents("https://wolfreak99.github.io/RCT2Windows/tryiteditor.html");
+    echo htmlspecialchars($html);
+?>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
 
-</body>
-</html>
 </textarea>
         <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">
           <input type="hidden" name="code" id="code" />
