@@ -203,6 +203,7 @@ body {
 <div class="trytopnav">
 <br>
   <button onclick="submitTryit(1)">Run &raquo;</button>
+<a href="example.html">Example code</a>
 </div>
 
 <div id="shield"></div>
@@ -214,20 +215,7 @@ body {
       <div id="textareawrapper">
         <textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false">
 
-<script type="text/javascript">
-$.load('example.html', function( printContent ){
-    history.pushState( printContent, 'Print title', '/print_page' );
-    document.write( printContent );
-    if( window.print() ){
-         document.location = '/back_page/';
-         // or history.go(-1);
-    } else {
-         document.location = '/history/';
-    }
-});
-</script>
-
-</textarea>
+        </textarea>
         <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">
           <input type="hidden" name="code" id="code" />
         </form>
