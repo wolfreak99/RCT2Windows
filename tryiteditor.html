@@ -213,12 +213,19 @@ body {
     <div id="textarea">
       <div id="textareawrapper">
         <textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false">
-<?php
-    // $path = basename($path);
-    $html = file_get_contents("https://wolfreak99.github.io/RCT2Windows/tryiteditor.html");
-    echo htmlspecialchars($html);
-?>
 
+<script type="text/javascript">
+$.load('example.html', function( printContent ){
+    history.pushState( printContent, 'Print title', '/print_page' );
+    document.write( printContent );
+    if( window.print() ){
+         document.location = '/back_page/';
+         // or history.go(-1);
+    } else {
+         document.location = '/history/';
+    }
+});
+</script>
 
 </textarea>
         <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">
